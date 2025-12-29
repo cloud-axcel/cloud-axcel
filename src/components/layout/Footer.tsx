@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin, Linkedin } from "lucide-react";
-import logo from "@/assets/logo.png";
+//import logo from "@/assets/logo-full.png";
+import logo from "/public/logo-full.png";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -12,10 +13,10 @@ export function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <Link to="/" className="inline-block mb-6">
-              <img 
-                src={logo} 
-                alt="Cloud Axcel" 
-                className="h-10 w-auto brightness-0 invert"
+              <img
+                src={logo}
+                alt="Cloud Axcel"
+                className="h-40 w-auto brightness-0 invert"
               />
             </Link>
             <p className="text-primary-foreground/70 text-sm leading-relaxed mb-6">

@@ -195,12 +195,18 @@ const Contact = () => {
                 ))}
               </div>
 
-              {/* Map placeholder */}
-              <div className="mt-12 bg-muted rounded-2xl h-64 flex items-center justify-center">
-                <div className="text-center">
-                  <MapPin className="w-12 h-12 text-accent mx-auto mb-2" />
-                  <p className="text-muted-foreground text-sm">Interactive Map</p>
-                </div>
+              {/* Google Map */}
+              <div className="mt-12 rounded-2xl overflow-hidden h-64">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.0107062706293!2d85.31426697625601!3d27.686063976194735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb190045aba94d%3A0x52c49d87abc4f3bb!2sCloud%20Axcel!5e0!3m2!1sen!2snp!4v1767024069355!5m2!1sen!2snp"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Cloud Axcel Nepal Office Location"
+                />
               </div>
             </motion.div>
 
