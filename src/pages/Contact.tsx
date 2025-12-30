@@ -41,9 +41,15 @@ const contactInfo = [
   },
   {
     icon: Phone,
-    label: "Phone",
-    value: "+977-9709109010",
+    label: "Nepal Phone",
+    value: "+977-970-910-9010",
     link: "tel:+9779709109010",
+  },
+  {
+    icon: Phone,
+    label: "USA Phone",
+    value: "+1 (470)-863-8584",
+    link: "tel:+14708638584",
   },
   {
     icon: MapPin,

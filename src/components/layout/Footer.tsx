@@ -98,7 +98,16 @@ export function Footer() {
                   href="tel:+9779709109010"
                   className="text-primary-foreground/70 hover:text-accent transition-colors text-sm"
                 >
-                  +977-9709109010
+                  +977-970-910-9010
+                </a>
+              </li>
+              <li className="flex items-center gap-3">
+                <Phone className="w-5 h-5 text-accent shrink-0" />
+                <a
+                  href="tel:+9779709109010"
+                  className="text-primary-foreground/70 hover:text-accent transition-colors text-sm"
+                >
+                  +1 (470)-863-8584
                 </a>
               </li>
               <li className="flex items-center gap-3">
