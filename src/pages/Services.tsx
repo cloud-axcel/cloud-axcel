@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useEffect } from "react";
 import {
   Code2,
   Smartphone,
@@ -13,7 +14,7 @@ import {
   Rocket,
   HeartHandshake,
 } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Layout } from "@/components/layout";
 import { Button } from "@/components/ui/button";
 import { CTASection } from "@/components/home";
@@ -141,12 +142,23 @@ const stickyFeatures = [
 ];
 
 const Services = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const element = document.getElementById(location.hash.slice(1));
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [location]);
+
   return (
     <Layout>
       {/* Hero Section */}
       <section className="py-24 bg-gradient-hero relative overflow-hidden">
         <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-3xl" />
-        
+
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
             <motion.span
@@ -183,15 +195,15 @@ const Services = () => {
           <div className="space-y-24">
             {services.map((service, index) => (
               <motion.div
+                id={service.title.replace(/\ /g, "")}
                 key={service.title}
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className={`grid lg:grid-cols-2 gap-12 items-center ${
-                  index % 2 === 1 ? "lg:flex-row-reverse" : ""
-                }`}
+                className={`grid lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? "lg:flex-row-reverse" : ""
+                  }`}
               >
-                <div className={index % 2 === 1 ? "lg:order-2" : ""}>
+                <div className={index % 2 === 1 ? "lg:order-2" : ""} id={service.title}>
                   <div className="w-20 h-20 bg-accent/10 rounded-2xl flex items-center justify-center mb-8">
                     <service.icon className="w-10 h-10 text-accent" />
                   </div>
@@ -217,14 +229,12 @@ const Services = () => {
                   </Link>
                 </div>
                 <div
-                  className={`${
-                    index % 2 === 1 ? "lg:order-1" : ""
-                  } bg-gradient-to-br from-primary/5 to-accent/5 rounded-3xl p-12 flex items-center justify-center`}
+                  className={`${index % 2 === 1 ? "lg:order-1" : ""
+                    } bg-gradient-to-br from-primary/5 to-accent/5 rounded-3xl p-12 flex items-center justify-center`}
                 >
                   <div
-                    className={`w-48 h-48 ${
-                      index % 2 === 0 ? "bg-primary" : "bg-accent"
-                    } rounded-3xl flex items-center justify-center animate-float`}
+                    className={`w-48 h-48 ${index % 2 === 0 ? "bg-primary" : "bg-accent"
+                      } rounded-3xl flex items-center justify-center animate-float`}
                   >
                     <service.icon className="w-24 h-24 text-primary-foreground" />
                   </div>

@@ -56,14 +56,15 @@ export function Footer() {
             <ul className="space-y-3">
               {[
                 "Web Development",
-                "Mobile Apps",
+                "Mobile Development",
                 "Cloud Solutions",
                 "AI & Machine Learning",
-                "DevOps",
+                "Cybersecurity",
+                "DevOps & Automation",
               ].map((service) => (
                 <li key={service}>
                   <Link
-                    to="/services"
+                    to={"/services#" + service.replace(/\ /g, "")}
                     className="text-primary-foreground/70 hover:text-accent transition-colors text-sm"
                   >
                     {service}
