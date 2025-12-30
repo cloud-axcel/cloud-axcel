@@ -48,7 +48,7 @@ Cloud Axcel combines **U.S. market understanding** with **highly skilled offshor
 - Mobile-first and responsive design
 - Brand-aligned design systems
 
-### Custom Software Development
+### Software Development
 - PHP-based web applications
 - REST API development and integrations
 - Third-party integrations (Square, Stripe, PayPal, POS systems)
