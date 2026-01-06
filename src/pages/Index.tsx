@@ -70,12 +70,14 @@ const Index = () => {
                 </Button>
               </Link>
 
+              {/*
               <Link to="https://youtu.be/I3hDWasrJhI" target="_blank">
                 <Button variant="hero-outline" size="xl" className="group w-full sm:w-auto">
                   <Play className="w-5 h-5" />
                   Watch Demo
                 </Button>
               </Link>
+              */}
             </motion.div>
 
             {/* Trust Badges */}
